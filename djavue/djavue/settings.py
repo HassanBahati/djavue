@@ -48,8 +48,7 @@ INSTALLED_APPS = [
 
 #configuring the cors headers
 CORS_ALLOWED_ORIGINS = [
-    #address to front end
-    'http://localhost:8080/'
+    'http://localhost:8080'
 ]
 
 MIDDLEWARE = [

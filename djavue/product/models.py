@@ -2,7 +2,7 @@ from django.db import models
 
 # category model
 class Cateogry(models.Model):
-    name = models.charField(max_length=255)
+    name = models.CharField(max_length=255)
     slug = models.SlugField()
 
     #order the categories by name
