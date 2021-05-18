@@ -22,5 +22,10 @@ class Cateogry(models.Model):
         return f'/{self.slug}/'
 
 class Product(models.Model):
-    #reefere,odels.nce to category
+    #once category deleted, all products in it too
     category = models.ForeignKey(Cateogry, related_name='products', on_delete='models.CASCADE')
+    name = models.CharField(max_length=255)
+    slug = models.SlugField()
+    description = models.TextField(blank=True, null=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(upload)
