@@ -1,3 +1,7 @@
+from io import BytesIO
+from PIL import Image
+
+from django.core.files import File
 from django.db import models
 
 # category model
@@ -17,5 +21,6 @@ class Cateogry(models.Model):
     def get_absolute_url(self):
         return f'/{self.slug}/'
 
-
-
+class Product(models.Model):
+    #reefere,odels.nce to category
+    category = models.ForeignKey(Cateogry, related_name='products', on_delete='models.CASCADE')
