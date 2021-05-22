@@ -1,3 +1,3 @@
 from django.shortcuts import render
 
-# Create your views here.
+# view set - to tell django what to get from the model
