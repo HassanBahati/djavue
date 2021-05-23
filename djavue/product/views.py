@@ -19,7 +19,7 @@ class LatestProductsList(APIView):
         return Response(serializer.data)
 
 #for viewing the details of a product
-class ProductDetails(APIView):
+class ProductDetail(APIView):
     def get_object(self, category_slug, product_slug):
         try:
             # checking if the product exists
