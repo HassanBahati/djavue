@@ -1,0 +1,22 @@
+-Todo list 
+
+-DONE Install and setup(Django)
+-DONE Install and setup (Vue)
+-DONE Include Font Awesome
+-DONE Set up the base template
+-DONE Create django app and models for products
+-DONE Create serializers and views for the products
+-Create simple front page (latest products)
+-Views a products
+     -Create viewset in Django
+     -Create vue page for showing products
+     -Add link to detail page
+-Sette opp Vuex / State
+-Make it possible to add to cart 
+     -Add functionality to Vuex
+     -Initialize store in app.vue
+     -Add button to product page
+     -Show a toast message
+-Make it possible to sign up
+-Make it possible to login
+-Create a simple my account page
