@@ -11,7 +11,7 @@
      -DONE Create viewset in Django
      -DONE Create vue page for showing products
      -DONE Add link to detail page
--Set Up Vuex / State
+-DONE Set Up Vuex / State
 -Make it possible to add to cart 
      -Add functionality to Vuex
      -Initialize store in app.vue
