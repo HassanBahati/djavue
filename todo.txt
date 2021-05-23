@@ -7,11 +7,11 @@
 -DONE Create django app and models for products
 -DONE Create serializers and views for the products
 -DONE Create simple front page (latest products)
--Views a products
+-DONE Views a products
      -DONE Create viewset in Django
-     -Create vue page for showing products
-     -Add link to detail page
--Sette opp Vuex / State
+     -DONE Create vue page for showing products
+     -DONE Add link to detail page
+-Set Up Vuex / State
 -Make it possible to add to cart 
      -Add functionality to Vuex
      -Initialize store in app.vue
