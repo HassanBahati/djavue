@@ -8,6 +8,8 @@ urlpatterns = [
     #for authentications
     path('api/v1/', include('djoser.urls')),
     path('api/v1/', include('djoser.urls.authtoken')),
+    #making product urls available
+    path('api/v1/', include('product.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
  
  

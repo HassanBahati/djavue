@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from rest_framework import serializers
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -8,7 +7,7 @@ from rest_framework.response import Response
 from .models import Product
 from .serializers import ProductSerializer
 
-
+ 
 #viewset for getting latest products to show on front page
 class LatestProductsList(APIView):
     def get(self, request, format=None):

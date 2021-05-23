@@ -55,13 +55,13 @@ class Product(models.Model):
     #check if thumbnail exists if not create  
     def get_thumbnail(self):
         if self.thumbnail:
-            return 'http:127.0.0.1:8000' + self.thumbnail.url
+            return 'http://127.0.0.1:8000' + self.thumbnail.url
         else:
             if self.image:
                 self.thumbnail = self.make_thumbnail(self.image)
                 self.save()
 
-                return 'http:127.0.0.1:8000' +self.thumbnail.url
+                return 'http://127.0.0.1:8000' +self.thumbnail.url
                 
             #if product has no image return empty string
             else:
