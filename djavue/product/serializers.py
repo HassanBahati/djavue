@@ -10,12 +10,12 @@ class ProductSerializer(serializers.ModelSerializer):
     #to configure the product serializer 
     class Meta:
         model = Product
-        fields = {
+        fields = [
             "id",
             "name",
             "get_absolute_url",
             "description",
             "price",
             "get_image",
-            "get_thumbnail"
-        }
+            "get_thumbnail",
+        ]
