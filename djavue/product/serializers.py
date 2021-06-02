@@ -10,7 +10,7 @@ class ProductSerializer(serializers.ModelSerializer):
     #to configure the product serializer 
     class Meta:
         model = Product
-        fields = [
+        fields = (
             "id",
             "name",
             "get_absolute_url",
@@ -18,4 +18,18 @@ class ProductSerializer(serializers.ModelSerializer):
             "price",
             "get_image",
             "get_thumbnail",
-        ]
+        )
+
+#serializer for categories
+class CategorySerializer(serializers.ModelSerializer):
+    #making products connected to categories
+    products = ProductSerializer(many=True)
+    
+    class Meta:
+        model = Category
+        fields = (
+            "id",
+            "name",
+            "get_absolute_url",
+            "products",
+        )

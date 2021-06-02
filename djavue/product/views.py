@@ -5,8 +5,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 # view set - to tell django what to get from the model
 
-from .models import Product
-from .serializers import ProductSerializer
+from .models import Category, Product
+from .serializers import ProductSerializer, CategorySerializer
 
  
 #viewset for getting latest products to show on front page
@@ -33,4 +33,21 @@ class ProductDetail(APIView):
         product = self.get_object(category_slug, product_slug)
         #using prod serializer to get all the fields
         serializer = ProductSerializer(product)
+        return Response(serializer.data)
+
+#for category
+class CategoryDetail(APIView):
+    def get_object(self, category_slug):
+        try:
+            # checking if the category exists
+            return Category.objects.get(slug=category_slug)
+        except Product.DoesNotExist:
+            # raise 404 error if prod doesnt exists 
+            raise Http404
+
+     #to overide the get method from above func
+    def get(self, request, category_slug, format=None):
+        category = self.get_object(category_slug)
+        #using prod serializer to get all the fields
+        serializer = CategorySerializer(category)
         return Response(serializer.data)
