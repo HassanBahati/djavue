@@ -1,4 +1,4 @@
--Todo list 
+-Todo list    Install bulma-toast
 
 -DONE Install and setup(Django)
 -DONE Install and setup (Vue)
@@ -12,11 +12,24 @@
      -DONE Create vue page for showing products
      -DONE Add link to detail page
 -DONE Set Up Vuex / State
--Make it possible to add to cart 
-     -Add functionality to Vuex
-     -Initialize store in app.vue
-     -Add button to product page
-     -Show a toast message
+-DONE Make it possible to add to cart 
+     -DONE Add functionality to Vuex
+     -DONE Initialize store in app.vue
+     -DONE Add button to product page
+     -DONE Show a toast message
+-DONE Implement a loading bar
+-DONE Set document title (all pages)
+-DONE Make it possible to view a category
+     -Convert the product to a component
+-Add search functionality
+-View cart
+     -a cart item should be a component
+-Change contents of cart 
+     -Increments/Decrement contents
+     -remove from cart
 -Make it possible to sign up
 -Make it possible to login
 -Create a simple my account page
+-Proceed to cehckout (authentication)
+-Create a simple success page
+-Show my orders on the my account page
