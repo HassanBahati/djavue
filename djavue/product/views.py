@@ -1,3 +1,5 @@
+from django.db.models import query
+from django.db.models import Q
 from django.http import Http404
 from rest_framework import serializers
 
@@ -53,3 +55,17 @@ class CategoryDetail(APIView):
         #using prod serializer to get all the fields
         serializer = CategorySerializer(category)
         return Response(serializer.data)
+
+#function based view for search functionality 
+@api_view(['POST'])
+#we set to accept post requests to this view 
+def search(request):
+    query=request.data.get('query', '')
+
+    if query:
+        products=Product.objects.filter(Q(name__icontains=query) | Q(description__icontains=query))
+        serializer = ProductSerializer(products, many=True)
+        return Response(serializer.data)
+        #if query is empty return empty product list
+    else:
+        return Response({'products': []})
