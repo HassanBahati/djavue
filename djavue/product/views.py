@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
+#to enable us to use function based views instead of class based view 
 from rest_framework.decorators import api_view
 # view set - to tell django what to get from the model
 
