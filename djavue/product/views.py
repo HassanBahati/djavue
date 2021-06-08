@@ -3,6 +3,7 @@ from rest_framework import serializers
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
 # view set - to tell django what to get from the model
 
 from .models import Category, Product
