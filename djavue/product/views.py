@@ -1,4 +1,3 @@
-from django.db.models import query
 from django.db.models import Q
 from django.http import Http404
 from rest_framework import serializers
@@ -57,8 +56,8 @@ class CategoryDetail(APIView):
         return Response(serializer.data)
 
 #function based view for search functionality 
-@api_view(['POST'])
 #we set to accept post requests to this view 
+@api_view(['POST'])
 def search(request):
     query=request.data.get('query', '')
 
